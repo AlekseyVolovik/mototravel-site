@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --index: calc(1vw + 1vh);
+    --gutter: 30px;
+    --side-small: 26;
+    --side-big: 36;
+    --depth: 4000px;
+    --transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1)
+}
+
+h1, h2, h3, h4{
+    font-weight: 300;
+    text-transform: uppercase; 
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+    color: white;
+    font-size: calc(var(--index) * 0.8);
+    line-height: 1.75;
+    height: var(--depth);
+    font-weight: 300;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    perspective: 1500px;
+}
+
+.gallery{
+    transform-style: preserve-3d;
+    height: 100%;
+}
+
+.frame{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition), opacity 0.75s ease;
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+.frame h1{
+    text-align: center;
+    font-size: calc((--index) * 3.3);
+    width: min-content;
+    line-height: 1;
+}
+
+.frame-media{
+    position: relative;
+    width: calc(var(--index) * var(--side-big));
+    height: calc(var(--index) * var(--side-small));
+    background-position: center;
+    background-size: cover;
+}
+
+.frame-media_another{
+    width: calc(var(--index) * var(--side-small));
+    height: calc(var(--index) * var(--side-big));
+}
+
+.frame-media__left{
+    right: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
+}
+
+.frame-media__right{
+    left: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
+}
+
+.frame_bg{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.text-left > * {
+    position: relative;
+    right: 18vw;
+}
+
+.text-right > * {
+    position: relative;
+    left: 18vw;
+}
+
+.frame h2{
+    font-size: calc((--index) * 3);
+    color: rgb(221, 160, 84);
+}
+
+.frame h4{
+    font-weight: 300;
+}
+
+.frame p{
+    max-width: 30vw;
+    margin-top: 5vh;
+}
