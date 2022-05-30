@@ -25,3 +25,47 @@ window.onscroll = function() {
 };
 
 window.scrollTo(0, 1);
+
+
+// Modal
+
+const modal = document.querySelector(".modal");
+const modalCloseBtn = document.querySelector("[data-close]");
+
+function openModal() {
+    modal.classList.toggle("modal-show");
+    document.body.style.overflow = "hidden";
+    clearInterval(modalTimerId);
+};
+
+function closeModal() {
+    modal.classList.toggle("modal-show");
+    document.body.style.overflow = "";
+};
+
+modalCloseBtn.addEventListener("click", closeModal);
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.code === "Escape" && modal.classList.contains("modal-show")) {
+        closeModal();
+    }
+});
+
+const modalTimerId = setTimeout(openModal, 5000); 
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+        openModal(); 
+    }
+});
+
+
+//Forms get
+
+

@@ -13,9 +13,10 @@
 </head>
 <body>
     <div class="container">
+        
         <div class="gallery">
             
-            <div class="frame">
+            <div class="frame frame_bg-min">
                 <div class="frame__content">
                     <h1>The world is beautiful</h1>
                 </div> 
@@ -55,7 +56,6 @@
                 </div> 
             </div>
 
-
             <div class="frame frame_bg">
                 <div class="frame__content text-right">
                     <h2>Who is it for?</h2>
@@ -63,8 +63,6 @@
                     </p>
                 </div> 
             </div>
-
-            
 
             <div class="frame">
                 <div class="frame__content">
@@ -79,8 +77,6 @@
                 </div> 
             </div>
 
-            
-
             <div class="frame frame_bg">
                 <div class="frame__content">
                     <video class="frame-media" src="./video/05.mp4" autoplay loop muted></video>
@@ -94,8 +90,6 @@
                     <div class="frame-media frame-media_another frame-media__left" style="background-image: url(./images/04.jpg)"></div>
                 </div> 
             </div>
-
-            
 
             <div class="frame frame_bg">
                 <div class="frame__content">
@@ -125,7 +119,20 @@
                 </div> 
             </div>
             
+        </div>
+    </div>
 
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#">
+                    <div class="modal__close" data-close>&times;</div>
+                    <div class="modal__title">We will contact you as soon as possible!</div>
+                    <input required placeholder="Your name" name="name" type="text" class="modal__input">
+                    <input required placeholder="Your phone number" name="phone" type="phone" class="modal__input">
+                    <button type="submit" class="btn">Return call</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>
