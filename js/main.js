@@ -187,7 +187,7 @@ const forms = document.querySelectorAll('form');
 const message = {
     loading: "Loading...",
     success: "Thanks, we'll call you back soon",
-    failure: "Error"
+    failure: "Thanks for trying"
 };
 
 forms.forEach(item => {
@@ -221,7 +221,6 @@ function bindPostData(form) {
         const formData = new FormData(form);
 
         const json = JSON.stringify(Object.fromEntries(formData.entries()));
-
         
 
         postData('http://localhost:3000/requests', json)
@@ -238,16 +237,6 @@ function bindPostData(form) {
         });
     });
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
