@@ -1,0 +1,22 @@
+{
+  "name": "mototravel-site",
+  "version": "1.0.0",
+  "description": "https://alekseyvolovik.github.io/mototravel-site/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlekseyVolovik/mototravel-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlekseyVolovik/mototravel-site/issues"
+  },
+  "homepage": "https://github.com/AlekseyVolovik/mototravel-site#readme",
+  "devDependencies": {
+    "json-server": "^0.17.0"
+  }
+}
